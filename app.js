@@ -1,6 +1,6 @@
 const holder = document.querySelector('.holder');
-const messageSoundEffect = new Audio("/message.wav");
-const music = new Audio("/music.mp3");
+const messageSoundEffect = new Audio("./message.wav");
+const music = new Audio("./music.mp3");
 const options = {
     speed: 50,
     delay: 1000,
