@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+html, body, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #ff7086;
+    font-family: 'Quicksand', 'Markazi Text', serif;
+}
+.holder {
+    position: relative;
+    width: 90vw;
+    max-width: 500px;
+    height: calc(90vw / 1.7);
+    max-height: 250px;
+    background-color: #fff;
+    box-shadow:
+        0px 2.3px 2.4px rgba(0, 0, 0, 0.02),
+        0px 5.6px 5.8px rgba(0, 0, 0, 0.028),
+        0px 10.5px 10.9px rgba(0, 0, 0, 0.035),
+        0px 18.8px 19.4px rgba(0, 0, 0, 0.042),
+        0px 35.1px 36.3px rgba(0, 0, 0, 0.05),
+        0px 84px 87px rgba(0, 0, 0, 0.07);
+    border: 5px solid #FFF;
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    user-select: none;
+    overflow: hidden;
+    scrollbar-width: 0px;
+}
+.holder::-webkit-scrollbar {
+    display: none;
+}
+.started::after {
+    content: '|';
+    display: inline-block;
+    animation: blinking linear infinite .5s;
+    opacity: 0;
+}
+@keyframes blinking {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 100vw;
+    background-color: #ff7086;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    padding-left: 5px;
+    color: #fff;
+    box-shadow: inset 2px -2px #0004, -2px 2px 5px #0004, inset -2px 2px #fff5;
+    cursor: pointer;
+}
+.holder .message-parent {
+    overflow: hidden;
+}
+.holder .message {
+    padding: 5px 15px;
+    background-color: #70bffe;
+    display: inline;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    float: right;
+}
+.holder .sara .message {
+    float: left;
+    background-color: #fe7070;
+}
